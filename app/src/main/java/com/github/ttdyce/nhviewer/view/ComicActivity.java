@@ -1,6 +1,9 @@
 package com.github.ttdyce.nhviewer.view;
 
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -143,6 +146,11 @@ public class ComicActivity extends AppCompatActivity implements ComicPresenter.C
                     .into(holder.ivComicPage);
 
         holder.tvComicPage.setText(String.valueOf(position + 1));
+
+        holder.ivComicPage.setImageBitmap(
+                null,
+                holder.ivComicPage.getDisplayMatrix(),
+                0,100);
 
         int pos = layoutManager.findLastVisibleItemPosition();
         pbComic.setProgress(100 * pos / layoutManager.getItemCount());

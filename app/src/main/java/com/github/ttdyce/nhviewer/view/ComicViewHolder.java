@@ -5,11 +5,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+import it.sephiroth.android.library.imagezoom.ImageViewTouch;
 
 import com.github.ttdyce.nhviewer.R;
 
 public class ComicViewHolder extends RecyclerView.ViewHolder {
-    public ImageView ivComicPage;
+    public ImageViewTouch ivComicPage;
     public TextView tvComicPage;
 
     public ComicViewHolder(View v) {
